@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Demo/Demo.iml" filepath="$PROJECT_DIR$/Demo/Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demo1/Demo1.iml" filepath="$PROJECT_DIR$/Demo1/Demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demo3/Demo3.iml" filepath="$PROJECT_DIR$/Demo3/Demo3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-lambda-app/api-lambda-app.iml" filepath="$PROJECT_DIR$/api-lambda-app/api-lambda-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection-app/collection-app.iml" filepath="$PROJECT_DIR$/collection-app/collection-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day01-oop-demo/day01-oop-demo.iml" filepath="$PROJECT_DIR$/day01-oop-demo/day01-oop-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day02-oop-demo/day02-oop-demo.iml" filepath="$PROJECT_DIR$/day02-oop-demo/day02-oop-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day03-oop-demo/day03-oop-demo.iml" filepath="$PROJECT_DIR$/day03-oop-demo/day03-oop-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practiceDemo/practiceDemo.iml" filepath="$PROJECT_DIR$/practiceDemo/practiceDemo.iml" />
+    </modules>
+  </component>
+</project>

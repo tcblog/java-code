@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-02" />
+        <module name="springmvc-01" />
+        <module name="tomcat-demo1" />
+        <module name="tomcat-demo2" />
+        <module name="Spring-03-mybatis" />
+        <module name="mybatisplus_01" />
+        <module name="maven-demo" />
+        <module name="filter-demo" />
+        <module name="ajax-demo" />
+        <module name="jsp-demo1" />
+        <module name="mybatis-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="filter" target="1.7" />
+      <module name="filter-demo1" target="11" />
+      <module name="sping-02" target="1.7" />
+      <module name="springmvc-02" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mybatisplus_01" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace:名称空间-->
+<mapper namespace="com.itheima.mapper.BrandMapper">
+
+
+    <!--
+        数据表的字段名称 和 实体类的属性名称 不一样，则不能自动封装数据
+        1.起别名 ： 对不一样的列名起别名，让别名和实体类的属性名一样
+            缺点：每次查询都要定义一次别名
+        2.resultMap：
+            1.定义<resulyMap>标签
+            2.在<select>标签中，使用resultMap属性 替换resultType属性
+    -->
+
+    <!--    id:唯一标识-->
+    <!--    type:映射的类型，支持别名-->
+
+    <resultMap id="brandResultMap" type="brand">
+        <!--        id:完成主键字段的映射-->
+        <!--            colunm：表的列名-->
+        <!--            property:实体类的属性名-->
+        <!--        result：完成一般字段的映射-->
+        <!--            colunm：表的列名&ndash;&gt;-->
+        <!--            property:实体类的属性名-->
+
+        <result column="brand_name" property="brandName"/>
+        <result column="company_name" property="companyName"/>
+    </resultMap>
+
+
+    <select id="selectALL" resultMap="brandResultMap">
+        select *
+        from mybatis.tb_brand;
+    </select>
+
+    <!--
+            参数占位符：
+            1. #{}:会将其替换为 ?,防止sql注入
+            2. ${}:拼sql,会存在sql注入问题
+            3. 使用时机：
+                * 参数传递时候：#{}
+                * 表名或者列名不固定情况下，${}，会存在sql注入问题
+
+             * 参数类型：parameterType:可以省略不写，因为在接口参数中写过了
+             * 特殊字符：
+                1. 转义字符：&lt;
+                2. CDATA区
+    -->
+
+    <select id="selectById" resultMap="brandResultMap">
+        select *
+        from mybatis.tb_brand
+        where id &lt; ${id};
+
+    </select>
+
+    <!--    <select id="selectByCondition" resultMap="brandResultMap">-->
+    <!--        select *-->
+    <!--        from mybatis.tb_brand-->
+    <!--        where-->
+    <!--            status = #{status}-->
+    <!--        and company_name like #{companyName}-->
+    <!--        and brand_name like #{brandName}-->
+    <!--    </select>-->
+
+    <select id="selectByCondition" resultMap="brandResultMap">
+        select *
+        from mybatis.tb_brand
+        <where>
+            <if test="status != null">
+                status = #{status}
+            </if>
+            <if test="companyName != null and companyName != '' ">
+                and company_name like #{companyName}
+            </if>
+
+            <if test="brandName != null and brandName != '' ">
+                and brand_name like #{brandName}
+            </if>
+        </where>
+    </select>
+
+
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        insert into mybatis.tb_brand(brand_name, company_name, ordered, description, status)
+            value (#{brandName},#{companyName},#{ordered},#{description},#{status});
+    </insert>
+
+
+    <update id="update">
+        update mybatis.tb_brand
+        set
+            brand_name = #{brandName},
+            company_name = #{companyName},
+            ordered = #{ordered},
+            description = #{description},
+            status = #{status}
+            where id = #{id};
+    </update>
+
+    <delete id="deleteById">
+        delete from mybatis.tb_brand where id = #{id};
+    </delete>
+
+<!--
+    mybatis会将数组参数，封装为一个map集合
+        * 默认：array = 数组
+        * 使用@Param注解改变map集合的默认key的名称
+
+-->
+
+    <delete id="deleteByIds">
+        delete from mybatis.tb_brand where id in
+            <foreach collection="array" item="ida" separator="," open="(" close=")">
+                #{ida}
+            </foreach>
+            ;
+    </delete>
+
+</mapper>

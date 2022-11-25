@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../ajax-demo" />
+    <file type="web" url="file://$PROJECT_DIR$/../filter" />
+    <file type="web" url="file://$PROJECT_DIR$/../filter-demo" />
+    <file type="web" url="file://$PROJECT_DIR$/../jsp-demo1" />
+    <file type="web" url="file://$PROJECT_DIR$/../mybatis-demo" />
+    <file type="web" url="file://$PROJECT_DIR$/../sping-01" />
+    <file type="web" url="file://$PROJECT_DIR$/../sping-02" />
+    <file type="web" url="file://$PROJECT_DIR$/../spring-02" />
+    <file type="web" url="file://$PROJECT_DIR$/../Spring-03-mybatis" />
+    <file type="web" url="file://$PROJECT_DIR$/../springmvc-01" />
+    <file type="web" url="file://$PROJECT_DIR$/../tomcat-demo1" />
+    <file type="web" url="file://$PROJECT_DIR$/../tomcat-demo2" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../tomcat-demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/../tomcat-demo2/pom.xml" />
+        <option value="$PROJECT_DIR$/../jsp-demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/../filter-demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/../filter/pom.xml" />
+        <option value="$PROJECT_DIR$/../filter-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../ajax-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../sping-01/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-02/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring-03-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../springmvc-01/pom.xml" />
+        <option value="$PROJECT_DIR$/../springmvc-01/springmvc-02/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatisplus_01/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../sping-01/spring-02/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
